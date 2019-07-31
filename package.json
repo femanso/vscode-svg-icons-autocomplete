@@ -1,0 +1,53 @@
+{
+	"name": "svg-icons-autocomplete",
+	"displayName": "Autocomplete images filename from specified dir",
+	"version": "0.0.1",
+	"publisher": "FernandoManso",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/femanso/vscode-extension-"
+	},
+	"bugs": {
+		"url": "https://github.com/femanso/vscode-extension-/issues"
+	},
+	"engines": {
+		"vscode": "^1.32.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"*"
+	],
+	"main": "./extension.js",
+	"scripts": {
+		"compile": "vsce package"
+	},
+	"contributes": {
+		"configuration": [
+			{
+				"title": "Fs Autocomplete",
+				"properties": {
+					"svgIconsAutocomplete.watchFolder": {
+						"type": "string",
+						"default": ".",
+						"description": "Folder to watch",
+						"scope": "window"
+					},
+					"svgIconsAutocomplete.extFilter": {
+						"type": "string",
+						"default": ".svg",
+						"description": "Suggest only files with this extension",
+						"scope": "window"
+					}
+				}
+			}
+		]
+	},
+	"devDependencies": {
+		"@types/node": "^10.12.18",
+		"tslint": "^5.16.0",
+		"typescript": "^3.5.3",
+		"@types/vscode": "^1.32.0"
+	}
+}
